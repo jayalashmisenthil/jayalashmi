@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>
+Simple calculator
+</title>
+<style>
+*
+{
+box-sizing:border-box;
+marigin:0;
+padding:0;
+}
+div
+{
+border: 1px solid #FFF8DC ;
+position:absolute;
+padding:50px;
+border-radius:50px;
+background-color:#FFDAB9;
+top:30%;
+left:30%;
+width:500px;
+font-family:Times New Roman;
+}
+button
+{
+list-style:none;
+background-color:red;
+border-radius:20px;
+width:180px;
+height: 50px;
+}
+</style>
+<script>
+function add()
+{
+var a=parseInt(document.getElementById("val1").value);
+var b=parseInt(document.getElementById("val2").value);
+var c=a+b;
+document.getElementById("val3").value=c;
+}
+function sub()
+{
+var a=parseInt(document.getElementById("val1").value);
+var b=parseInt(document.getElementById("val2").value);
+var c=a-b;
+document.getElementById("val3").value=c;
+}
+function mul()
+{
+var a=parseInt(document.getElementById("val1").value);
+var b=parseInt(document.getElementById("val2").value);
+var c=a*b;
+document.getElementById("val3").value=c;
+}
+function div()
+{
+var a=parseInt(document.getElementById("val1").value);
+var b=parseInt(document.getElementById("val2").value);
+var c=a/b;
+document.getElementById("val3").value=c;
+}
+</script>
+</head>
+<body>
+
+<div id="cal">
+<table width="500px" height"200px">
+<tr>
+<td>First Value:</td>
+<td> <input type="text" id="val1"></td>
+</tr>
+<tr>
+<td>Second Vlaue:</td>
+<td> <input type="text" id="val2"></td>
+</tr>
+<tr><br>
+<td>Answer:</td>
+<td> <input type="text" id="val3"></td>
+</tr>
+</table>
+<br>
+<button  onclick="add()"> Add</button>
+<button onclick="sub()">Sub</button>
+<button onclick="mul()" >Mul</button>
+<button onclick="div()">Div</button>
+
+</div>
+
+</body>
+</html>
